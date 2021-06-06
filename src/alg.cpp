@@ -8,7 +8,7 @@
 BST<std::string> makeTree(const char* filename) { 
 BST<std::string>tree; 
   char difFromAToa = 'a' - 'A';
-  std::string wcount = "";
+  std::string wordc = "";
   std::ifstream file(filename);
   if (!file) { 
     std::cout<<"File read error"<<std::endl;
@@ -26,5 +26,5 @@ BST<std::string>tree;
     }
   }
   file.close();
-  return Tree;
+  return tree;
 }
