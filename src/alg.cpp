@@ -12,7 +12,7 @@ BST<std::string>tree;
   std::ifstream file(filename);
   if (!file) {
     std::cout << "File read error" << std::endl;
-    return Tree;
+    return tree;
   }
   while (!file.eof()) {
     char sym = file.get();
@@ -21,7 +21,7 @@ BST<std::string>tree;
         sym += difFromAToa;
       wcount += sym;
     } else if (wcount != "") {
-      Tree.add(wcount);
+      tree.add(wcount);
       wcount = "";
     }
   }
