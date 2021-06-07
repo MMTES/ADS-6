@@ -5,15 +5,15 @@
 #include  <cstdlib>
 #include  "bst.h"
 
-BST<std::string> makeTree(const char* filename) { 
-BST<std::string>tree; 
+BST<std::string> makeTree(const char* filename) {
+BST<std::string>tree;
   char difFromAToa = 'a' - 'A';
   std::string wordc = "";
   std::ifstream file(filename);
-  if (!file) { 
-    std::cout<<"File read error"<<std::endl;
+  if (!file) {
+    std::cout << "File read error" << std::endl;
     return Tree;
-  } 
+  }
   while (!file.eof()) {
     char sym = file.get();
     if ((sym >= 'A' && sym <= 'Z') || (sym >= 'a' && sym <= 'z')) {
